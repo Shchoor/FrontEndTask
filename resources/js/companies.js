@@ -24,8 +24,8 @@ $(function() {
                     //display list of partners for each company
                     $.each(value.partners, function (index, value) {
                         let progress =
-                        `<div class="progress progress-bar-vertical">
-                            <div class="progress-bar" role="progressbar" style="width:`+ value.value +`%;" ></div>
+                        `<div class="progress progress-bar-vertical flex-item">
+                            <div class="progress-bar" role="progressbar" style="height:`+ value.value +`%;" ></div>
                             <div class="progress-bar-title"><h4>`+ value.name +" "+ value.value+" %"+ `</h4></div>
                         </div>`;
 
