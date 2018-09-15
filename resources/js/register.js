@@ -22,11 +22,14 @@ $(function() {
         }).done(function(data) {
 
             if(data.status === 'OK') {
-                $(location).attr('href', './companies.html');
+                $("#message").empty().append("User has been created");
+                setTimeout( function() {
+                    $(location).attr('href', './companies.html');
+                }, 2000);
             } else if(data.status === 'Form error' || data.status === 'Error') {
                 $("#message").empty().append(data.message);
             }else {
-                $("#message").empty().append("Woops, something went wrong. Unknown error occured, please try again later");
+                $("#message").empty().append("Woops, something went wrong. Unknown error occured, please try something else");
             }
         });
 
