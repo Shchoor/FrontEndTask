@@ -17,7 +17,7 @@ $(function() {
             
             //append data to list
             $.each(data.list, function (index, value) {
-                $("#companiesList").append('<a  id="company' + index + '" class="list-group-item list-group-item-action">'+ value.name + '</a>');
+                $("#companiesList").append('<a href="#" id="company' + index + '" class="list-group-item list-group-item-action">'+ value.name + '</a>');
 
                 $('#company' + index + '').click(function() {
                     onPartnersUpdate(value.partners.sort(dynamicSort(sortOrder)), index, value);
@@ -79,30 +79,26 @@ $(function() {
     }).done(function(data) {
 
         $.each(data.list, function (index, value) {
-            let description = value.description;
-            if (description.length > 90) {
-                description = description.substring(0, 90) + "...";
-            }
-            
+        
             let slide = 
             `<div id="slide`+ index +`" class="carousel-item">
                 <img class="image" src="`+value.img+`" alt="img`+index+`">
                 <div class="carousel-caption text-dark">
                     <h6>`+value.link+`</h6>
-                    <p>`+description+`</p>
+                    <p>`+getDescription(value.description)+`</p>
                     <p><b>`+value.author+`</b></p>
                     <p>Posted: `+getDate(value.date)+`</p>
                 </div>
             </div>`,
-            indicator = `<li data-target="#demo" data-slide-to="`+index+`"></li>`;
+            indicator = `<li class="bg-secondary" data-target="#demo" data-slide-to="`+index+`"></li>`;
     
             $("#slideshow").append(slide);
             $("#indicators").append(indicator);
         });
         $("#slide0").addClass("active");
-        $("#loader4").css("display", "none");
 
-        console.log(data);
+        $("#loader4").css("display", "none");
+        $("#demo").css("display","block");
     });
 
 });
@@ -149,4 +145,12 @@ function getDate(date) {
     var time = day + '.' + month + '.' + year;
 
     return time;
+}
+
+function getDescription(value) {
+    if (value.length > 90) {
+        return value.substring(0, 90) + "...";
+    } else {
+        return value;
+    }
 }

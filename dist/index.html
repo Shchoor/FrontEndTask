@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Register</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <form class="form-signin" method="POST">
+            <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+            <label for="inputName" class="sr-only">Name</label>
+            <input type="text" minlength="3" maxlength="60" name="name" id="inputName" class="form-control" placeholder="Name" required autofocus>
+            <label for="inputSecondName" class="sr-only">Secondname</label>
+            <input type="text" minlength="3" maxlength="60" name="secondname" id="inputSecondName" class="form-control" placeholder="Second name" required>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required>
+            <select id="select" class="form-control" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input id="inputPassword" minlength="8" maxlength="60" type="password" name="pass" class="form-control" placeholder="Enter password..." required><br>
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="checkbox" value="remember-me" required>Conditions of Agreement
+                </label>
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+            <div id="message"></div>
+        </form>
+        
+        <script src="js/main.js"></script>
+    </body>
+</html>

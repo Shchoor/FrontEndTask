@@ -1,0 +1,131 @@
+html,
+body {
+    height: 100%;
+}
+.wrapper {
+    background-color: #ffffff;
+    margin: auto;
+    min-width: 300px;
+    max-width: 1150px;
+    text-align: center;
+}
+.container {
+    min-width: 300px;
+    max-width: 400px;
+    height: 280px;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 10px auto;
+    vertical-align: middle;
+    text-align: left;
+}
+.wideContainer {
+    width: 805px;
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+.header {
+    background-color: #c4bcbc;
+    font-weight: bold;
+}
+.headerText {
+    margin: 0 20px 0 20px;
+}
+.loader {
+    display: block;
+}
+.companiesList {
+    width: auto;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 5px;
+}
+.companyPartnersList {
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 12px;
+}
+.flex-item {
+    background-color: rgb(238, 240, 255);
+    flex: 0 0 150px;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    background-color: #fff;
+    border: 1px solid #d8d7d7;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: none;
+    text-align: center;
+    line-height: 130px;
+    margin: 10% auto;
+    font-size: 250%;
+}
+.progress {
+    position: relative;
+    width: 100px;
+    min-height: 200px;
+    margin: 10px;
+    text-align: middle;
+}
+.progress-bar-vertical {
+    display: flex;
+    align-items: flex-end;
+    float: left;
+}
+.progress-bar-vertical .progress-bar {
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    transition: height 0.6s ease;
+}
+.progress-bar-title {
+    position: absolute;
+    text-align: center;
+    line-height: 20px; /* line-height should be equal to bar height */
+    overflow: hidden;
+    right: 0;
+    left: 0;
+}
+.card-body {
+    height: 100%;
+}
+.btn-group {
+    margin: 5px 0 5px 0;
+}
+.carousel {
+    display: none;
+}
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+.image {
+    width:50%;
+    height:255px;
+    object-fit:scale-down;
+}
+.carousel-caption {
+    margin-left: 40%;
+    font-size: 0.7em;
+    margin-bottom: -20px;
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
